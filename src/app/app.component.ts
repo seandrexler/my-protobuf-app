@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { awesomepackage } from '../models/compiled';
-import { breakermodule } from 'src/models/openfmb-model';
+// import { awesomepackage } from '../models/compiled';
+import { awesomepackage } from './models/openfmb-model';
+import { breakermodule } from './models/openfmb-model';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,6 @@ import { breakermodule } from 'src/models/openfmb-model';
 export class AppComponent {
   title = 'my-protobuf-app';
 
-  /**
-   *
-   */
   constructor() {
     let message = awesomepackage.AwesomeMessage.create({ awesomeField: 'hello' });
     let buffer = awesomepackage.AwesomeMessage.encode(message).finish();

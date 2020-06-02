@@ -20,13 +20,13 @@ done
 
 popd
 
-mkdir -p src/models
+mkdir -p src/app/models
 
 # remove the generated js model file and ts declaration file
-[ -e src/models/openfmb-model.js ] && rm src/models/openfmb-model.js
-[ -e src/models/openfmb-model.d.ts ] && rm src/models/openfmb-model.d.ts
+[ -e src/app/models/openfmb-model.js ] && rm src/app/models/openfmb-model.js
+[ -e src/app/models/openfmb-model.d.ts ] && rm src/app/models/openfmb-model.d.ts
 
 # generate the js model file
-./node_modules/protobufjs/cli/bin/pbjs -t static-module -w commonjs -o src/models/openfmb-model.js $filenames
+./node_modules/protobufjs/cli/bin/pbjs -t static-module -w commonjs -o src/app/models/openfmb-model.js $filenames
 # generate the ts declaration file
-./node_modules/protobufjs/cli/bin/pbts -o src/models/openfmb-model.d.ts src/models/openfmb-model.js
+./node_modules/protobufjs/cli/bin/pbts -o src/app/models/openfmb-model.d.ts src/app/models/openfmb-model.js

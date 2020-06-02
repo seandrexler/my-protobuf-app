@@ -44,3 +44,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignore Generated Code
+src/app/models/openfmb-model.js
+src/app/models/openfmb-model.d.ts
